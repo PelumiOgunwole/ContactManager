@@ -59,7 +59,7 @@ namespace ContactMgrWebModels
         public int StateId { get; set; }
 
         // a navigation property
-        public virtual State? State { get; set; }
+        public virtual State State { get; set; }
 
         [Required(ErrorMessage = "User ID Is Required")]
         public string UserId { get; set; }

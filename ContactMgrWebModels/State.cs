@@ -2,7 +2,7 @@
  
 namespace ContactMgrWebModels
 {
-    internal class State
+    public class State
     {
         [Key]
         public int Id { get; set; }
