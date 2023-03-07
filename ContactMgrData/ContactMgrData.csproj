@@ -14,4 +14,8 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\ContactMgrWebModels\ContactMgrWebModels.csproj" />
+	</ItemGroup>
+
 </Project>

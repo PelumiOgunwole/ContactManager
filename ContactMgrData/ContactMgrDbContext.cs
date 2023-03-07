@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ContactMgrWebModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace ContactMgrData
@@ -7,6 +8,10 @@ namespace ContactMgrData
 
     {
         private static IConfigurationRoot _configuration;
+
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<State> state { get; set; }
+
 
         public ContactMgrDbContext() { }
 
