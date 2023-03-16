@@ -28,7 +28,7 @@ namespace ContactMgrWebModels
         [EmailAddress(ErrorMessage ="Invalid Email Address")]
         public string Email { get; set; }
 
-        [Display(Name = "First Name")]
+        [Display(Name = "Street Address")]
         [Required(ErrorMessage = "Street Address Is Required")]
         [StringLength(ContactMgrConstants.Max_STREET_ADDRESS_LENGTH)]
         public string StreetAddress { get; set; }
@@ -51,11 +51,11 @@ namespace ContactMgrWebModels
         [Required(ErrorMessage = "Zip Code Is Required")]
         [StringLength(ContactMgrConstants.Max_ZIP_CODE_LENGTH,MinimumLength =ContactMgrConstants.Min_ZIP_CODE_LENGTH)]
         [RegularExpression(@"(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstv‌​xy]{1} *\d{1}[ABCEGHJKLMNPRSTVWXYZabceghjklmnprstvxy]{1}\d{1}$)", ErrorMessage = "That postal code is not a valid US or Canadian postal code.")]
-
         public string ZipCode { get; set; }
 
         [Display(Name = "State")]
         [Required(ErrorMessage = "State Is Required")]
+         
         public int StateId { get; set; }
 
         // a navigation property

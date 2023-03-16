@@ -10,7 +10,7 @@ namespace ContactMgrData
         private static IConfigurationRoot _configuration;
 
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<State> state { get; set; }
+        public DbSet<State> State { get; set; }
 
 
         public ContactMgrDbContext() { }

@@ -56,7 +56,7 @@ namespace ContactMgrData.Migrations
                 table: "Contacts",
                 column: "StateId");
         }
-
+         
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

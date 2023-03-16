@@ -1,4 +1,5 @@
 using ContactMgr.Data;
+using ContactMgrData;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// inject ContactMgrDbContext 
+var myContactManagerContext = builder.Configuration.GetConnectionString("ContactMgr");
+builder.Services.AddDbContext<ContactMgrDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
